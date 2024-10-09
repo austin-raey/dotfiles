@@ -18,5 +18,18 @@ if [ -d ./Developer ]; then
   cd ./Developer
 fi
 
+# This could be probably done with a GitHub Dependabot Action,
+# oh well LOL 🤷‍♂️ I prefer the process to be manual but it doesn't
+# scale well with a lot of repos.
+__pkg-update-git-commit () {
+  pnpm up -L
+  if ! git diff --quiet; then
+		git add .
+    git commit -m "📦 package update"
+		code .
+  fi
+}
+
+alias pkg="__pkg-update-git-commit"
 alias u="brew update && brew upgrade && brew cleanup"
 alias p="pnpm"

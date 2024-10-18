@@ -9,3 +9,6 @@ $env:PATH = @(
 if ($PWD.Drive.Name -ne 'D') {
   Set-Location -Path 'D:\'
 }
+
+Set-Alias -Name open -Value explorer
+Set-Alias -Name p -Value pnpm

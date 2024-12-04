@@ -1,1 +1,5 @@
-[ -n "$PS1" ] && . ~/.zprofile;
+HISTSIZE=3
+SAVEHIST=0
+
+autoload -Uz compinit
+compinit

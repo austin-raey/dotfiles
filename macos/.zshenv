@@ -1,1 +1,15 @@
-[ -n "$PS1" ] && . ~/.zprofile;
+export PROTO_HOME="$HOME/.proto"
+export PATH="$HOME/Developer/bin:$PROTO_HOME/shims:$PROTO_HOME/bin:$HOME/.rover/bin:$PATH"
+
+alias cdd="cd ~/Developer"
+alias p="pnpm"
+alias u="brew update && brew upgrade && brew cleanup"
+__pkg-update-git-commit () {
+  pnpm up -L
+  if ! git diff --quiet; then
+		git add .
+    git commit -m "📦 package update"
+		code .
+  fi
+}
+alias pkg="__pkg-update-git-commit"

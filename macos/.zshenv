@@ -1,15 +1,22 @@
-export PROTO_HOME="$HOME/.proto"
-export PATH="$HOME/Developer/bin:$PROTO_HOME/shims:$PROTO_HOME/bin:$HOME/.rover/bin:$PATH"
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_RUNTIME_DIR="$HOME/.run"
 
-alias cdd="cd ~/Developer"
-alias p="pnpm"
+export VISUAL="code"
+export EDITOR="$VISUAL"
+export PROTO_HOME="$XDG_CONFIG_HOME/proto"
+
+export PATH="$HOME/.rover/bin:$PATH"
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
+
 alias u="brew update && brew upgrade && brew cleanup"
-__pkg-update-git-commit () {
-  pnpm up -L
-  if ! git diff --quiet; then
-		git add .
-    git commit -m "📦 package update"
-		code .
-  fi
+alias edit="$EDITOR"
+alias e="$EDITOR"
+
+function fix-git() {
+	git diff -p \
+    | grep -E '^(diff|old mode|new mode)' \
+    | sed -e 's/^old/NEW/;s/^new/old/;s/^NEW/new/' \
+    | git apply
 }
-alias pkg="__pkg-update-git-commit"

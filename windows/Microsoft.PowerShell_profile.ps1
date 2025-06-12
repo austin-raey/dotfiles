@@ -4,6 +4,7 @@ $env:PROTO_HOME = "D:\__tools\proto"
 $env:PATH = @(
   (Join-Path $env:PROTO_HOME "shims")
   (Join-Path $env:PROTO_HOME "bin")
+  $env:PNPM_HOME
   $env:PATH
 ) -join [IO.PATH]::PathSeparator;
 

@@ -1,6 +1,3 @@
-SAVEHIST=0
-HISTSIZE=50
-
 autoload -Uz compinit
 compinit
 

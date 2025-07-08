@@ -1,6 +1,14 @@
 autoload -Uz compinit
 compinit
 
+# Navigates to my Developer directory and provides tab autocompletion for subdirectories to 2 levels. Helps with getting around to different projects quickly.
+# Usage: cdd [dir1] [dir2]
+# NOTE: Typically my Developer directory has the structure:
+# ~/Developer/
+# ├── project-domain
+# │   ├── project1
+# │   ├── project2
+# │   └── project3
 __goto_or_edit() {
 	local action="cd"
 	local directory="$HOME/Developer"

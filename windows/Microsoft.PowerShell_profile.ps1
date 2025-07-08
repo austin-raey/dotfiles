@@ -14,6 +14,7 @@ if ($PWD.Drive.Name -ne "D") {
 
 function Update-Machine {
   winget upgrade -r
+  proto upgrade
 }
 
 Set-Alias -Name open -Value explorer

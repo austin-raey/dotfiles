@@ -1,3 +1,5 @@
+# NOTE - Environment variables, XDG Variables:
+# These are set because some tools will use these directories for storage if found to be set.
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -8,13 +10,13 @@ export VISUAL="code"
 export EDITOR="$VISUAL"
 export PROTO_HOME="$XDG_CONFIG_HOME/proto"
 
-export PATH="$HOME/.rover/bin:$PATH"
 export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$PATH";
 
 alias u="brew update && brew upgrade && brew cleanup"
 alias edit="$EDITOR"
 alias e="$EDITOR"
 
+# For me if copying a backup from a ExFAT drive
 function fix-git() {
 	git diff -p \
 		| grep -E '^(diff|old mode|new mode)' \

@@ -42,3 +42,5 @@ compdef _comp__goto_or_edit '__goto_or_edit +edit'
 
 alias cdd="__goto_or_edit"
 alias cde="__goto_or_edit +edit"
+
+eval "$(proto activate zsh)"

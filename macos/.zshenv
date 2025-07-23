@@ -10,19 +10,10 @@ export GIT_EDITOR="code --wait"
 export VISUAL="code"
 export EDITOR="$VISUAL"
 
+export NPM_CONFIG_CACHE="$XDG_CACHE_HOME/npm"
+export NPM_CONFIG_PREFIX="$XDG_DATA_HOME/npm"
+export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export PNPM_HOME="$XDG_CONFIG_HOME/pnpm"
 export PROTO_HOME="$XDG_CONFIG_HOME/proto"
 
-export PATH="$PROTO_HOME/bin:$PATH";
-
-alias u="brew update && brew upgrade && brew cleanup"
-alias edit="$EDITOR"
-alias e="$EDITOR"
-
-# For me if copying a backup from a ExFAT drive
-function fix-git() {
-	git diff -p \
-		| grep -E '^(diff|old mode|new mode)' \
-		| sed -e 's/^old/NEW/;s/^new/old/;s/^NEW/new/' \
-		| git apply
-}
+export PATH="$PROTO_HOME/shims:$PROTO_HOME/bin:$HOME/.rd/bin:$PATH"

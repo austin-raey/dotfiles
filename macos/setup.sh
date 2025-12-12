@@ -14,6 +14,3 @@ defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-sp
 
 killall Dock
 killall SystemUIServer
-
-# Install brew via Homebrew's website first.
-brew install git proto mas

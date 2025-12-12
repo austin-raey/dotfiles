@@ -6,6 +6,4 @@ for config_file in "$XDG_CONFIG_HOME/zsh/"*.zsh; do
 	[ -r "$config_file" ] && source "$config_file"
 done
 
-eval "$(proto activate zsh)"
-
 [ -d "./Developer" ] && cd ./Developer

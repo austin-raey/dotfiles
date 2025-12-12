@@ -16,6 +16,7 @@ export NPM_CONFIG_LOGS_DIR="$XDG_STATE_HOME/npm/logs"
 export NPM_CONFIG_PREFIX="$XDG_DATA_HOME/npm"
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export PNPM_HOME="$XDG_CONFIG_HOME/pnpm"
+export PROTO_CONFIG_MODE="upwards-global"
 export PROTO_HOME="$XDG_CONFIG_HOME/proto"
 export YARN_CACHE_FOLDER="$XDG_CACHE_HOME/yarn"
 

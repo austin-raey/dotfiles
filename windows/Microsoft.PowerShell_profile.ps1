@@ -1,5 +1,6 @@
 $env:EDITOR = "code"
 $env:PNPM_HOME = "D:\__tools\pnpm"
+$env:PROTO_CONFIG_MODE = "upwards-global"
 $env:PROTO_HOME = "D:\__tools\proto"
 $env:PATH = @(
   (Join-Path $env:PROTO_HOME "shims")

@@ -38,6 +38,7 @@ function Set-EnvVar {
 
 $varsToSet = @{
 	"PNPM_HOME" = "D:\__tools\pnpm"
+	"PROTO_CONFIG_MODE" = "upwards-global"
 	"PROTO_HOME" = "D:\__tools\proto"
 	"XDG_CACHE_HOME" = "D:\__tools\xdg\cache"
 	"XDG_CONFIG_HOME" = "D:\__tools\xdg\config"

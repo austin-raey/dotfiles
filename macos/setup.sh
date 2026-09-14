@@ -1,5 +1,4 @@
 # commands to be run in a Terminal at some point after the OS is installed.
-mkdir -p "$XDG_CACHE_HOME" "$XDG_CONFIG_HOME" "$XDG_DATA_HOME" "$XDG_RUNTIME_DIR" "$XDG_STATE_HOME"
 mkdir -p "$HOME/Pictures/Screenshots"
 mkdir -p "$HOME/Developer"
 
@@ -11,6 +10,8 @@ sudo scutil --set HostName mbp
 sudo scutil --set LocalHostName mbp
 
 defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="small-spacer-tile";}'
+defaults write com.apple.dock persistent-apps -array-add '{"tile-type"="spacer-tile";}'
 
 killall Dock
-killall SystemUIServer

@@ -1,13 +1,20 @@
 function __update() {
-  echo "\033[1;34mUpdating with brew\033[0m"
-  brew update && brew upgrade && brew autoremove && brew cleanup
-  echo "\033[1;34mUpdating with proto\033[0m"
   cd $HOME
-  proto outdated
-  proto install
-  cd -
+  echo "\033[1;34mUpdating with brew\033[0m"
+  brew update
+  brew upgrade -y
+  brew autoremove
+  brew cleanup
+  brew completions link
+
+  echo "\033[1;34mUpdating with mise\033[0m"
+  mise up
+  cd - > /dev/null
 }
 
-alias u="__update"
-alias edit="$EDITOR"
+alias code="$EDITOR"
 alias e="$EDITOR"
+alias edit="$EDITOR"
+alias u="__update"
+
+alias profile="$EDITOR ~/.zshenv ~/.zprofile ~/.zshrc ~/.local/config/zsh"

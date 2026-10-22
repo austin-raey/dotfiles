@@ -1,0 +1,11 @@
+alias code '$EDITOR'
+alias e '$EDITOR'
+alias edit '$EDITOR'
+alias p 'pnpm'
+alias px 'pnpx'
+alias u '__update'
+alias v 'vp'
+alias vr 'vpr'
+alias vx 'vpx'
+
+alias profile '$EDITOR ~/.zshenv ~/.zprofile ~/.zshrc ~/.config'

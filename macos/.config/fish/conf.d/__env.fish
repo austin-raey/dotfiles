@@ -15,4 +15,3 @@ fish_add_path "$HOME/.local/share/mise/shims"
 
 /opt/homebrew/bin/brew shellenv | source
 /opt/homebrew/bin/mise activate fish | source
-"$HOME/.config/vite-plus/env.fish" | source

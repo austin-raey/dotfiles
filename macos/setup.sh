@@ -11,7 +11,7 @@ touch -p "$HOME/.config/fish/config.fish"
 	set -o pipefail
 	cd "$HOME/.config" || exit 1
 	curl -fsSL https://github.com/austin-raey/dotfiles/archive/refs/heads/latest.tar.gz |
-		tar -xz --strip-components=1
+		tar -xz --strip-components=3 dotfiles-latest/macos/.config
 )
 # If using zsh
 ## TBD

@@ -1,6 +1,6 @@
 ---
 name: deslop
-description: 'When the user invokes /deslop, initiate an adversarial code review procedure.'
+description: 'When the user invokes /deslop, invoke this procedure.'
 argument-hint: '/deslop code for review'
 ---
 
